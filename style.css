@@ -1,0 +1,151 @@
+div#dismissible {
+    border: 0.5px solid;
+    /* border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 1; */
+    box-shadow: 1px 1px 15px 4px rgba(0, 0, 255, 0.5);
+    /* animation-name: animation; */
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transform-style: preserve-3d;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes animation {
+    0% {
+        box-shadow: 1px 1px 20px 4px rgba(0, 0, 255, 0.2);
+    }
+
+    50% {
+        box-shadow: 1px 1px 20px 4px rgba(0, 0, 255, 0.6);
+    }
+
+    75% {
+        box-shadow: 1px 1px 20px 4px rgba(255, 255, 0, 0.4);
+    }
+
+    100% {
+        box-shadow: 1px 1px 20px 4px rgba(0, 0, 255, 0.2);
+    }
+}
+
+div#dismissible:hover {
+    transform: scale(1.02);
+    transition: transform 0.5s;
+    /* background-color: rgb(68, 68, 68); */
+}
+
+iron-selector#chips {
+    padding-top: 5px;
+}
+
+ytd-watch-next-secondary-results-renderer.style-scope.ytd-watch-flexy {
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 90vh;
+}
+
+ytd-watch-next-secondary-results-renderer.style-scope.ytd-watch-flexy::-webkit-scrollbar {
+    width: 8px;
+}
+
+ytd-watch-next-secondary-results-renderer.style-scope.ytd-watch-flexy::-webkit-scrollbar-thumb {
+    background-color: rgb(144, 144, 144);
+    border-radius: 12px;
+}
+
+ytd-watch-next-secondary-results-renderer.style-scope.ytd-watch-flexy::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(96, 96, 96);
+}
+
+.html5-video-container {
+    animation-name: videoAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    transform-style: preserve-3d;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes videoAnimation {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+        /* transform-origin: bottom;
+        transform: perspective(800px) rotateX(-90deg); */
+        transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+        /* transform-origin: bottom;
+        transform: perspective(0) rotateX(0deg); */
+        transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+}
+
+.mouse1 {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgb(255, 255, 255);
+    top: -20px;
+    left: -20px;
+    pointer-events: none;
+    transition: transform 0.9s;
+    z-index: 9999;
+}
+
+.mouse2 {
+    position: fixed;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    top: -1px;
+    left: -1px;
+    pointer-events: none;
+    transition: transform 0.5s;
+    z-index: 9999;
+}
+
+.spider {
+    position: absolute;
+    width: 20%;
+    height: auto;
+    z-index: 9999;
+    animation-name: spiderMotion;
+    animation-duration: 8s;
+}
+
+@keyframes spiderMotion {
+    0% {
+        margin-top: 0px;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        margin-top: 65%;
+        transform: rotate(10deg);
+    }
+}
+
+.yarn {
+    position: absolute;
+    width: 1px;
+    height: 12px;
+    z-index: 999;
+    background-color: yellowgreen;
+    animation-name: yarnMotion;
+    animation-duration: 8s;
+}
+
+@keyframes yarnMotion {
+    0% {
+        height: 0px;
+    }
+
+    100% {
+        height: 1050px;
+    }
+}
